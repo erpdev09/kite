@@ -1,40 +1,38 @@
 # Kite AI - Daily Interaction
 
-## Persyaratan
+## Requirements
 
-Pastikan Anda memiliki Python 3.x terinstal di sistem Anda. Anda juga perlu menginstal beberapa dependensi Python yang diperlukan oleh aplikasi ini.
+Ensure that you have Python 3.x installed on your system. You will also need to install some necessary Python dependencies for this application.
 
-## Instalasi
+## Installation
 
-Sebelum menggunakan script ini pastikan kalian daftar dulu dengan link berikut sebagai bentuk dukungan kepada author:
-https://testnet.gokite.ai?r=jZcxg5xh
+Before using this script, please register via the following link as a form of support for the author:
+https://testnet.gokite.ai?r=swK7dbB8
 
-1. Clone repositori ini
+1. Clone this repository
+
    ```bash
-   https://github.com/Semutireng22/kiteai
+   git clone https://github.com/Semutireng22/kiteai
    cd kiteai
    ```
-   atau unduh file `main.py` ke direktori lokal Anda.
+   or download the 'main.py' file to your local directory.
    
-2. Instal dependensi yang diperlukan:
+2. Install the required dependencies:
+
     ```bash
     pip install -r requirements.txt
     ```
     
-3. Jalankan aplikasi dengan perintah berikut:
+3. Run the application with the following command:
+
     ```bash
     python3 main.py
     ```
     
-## Catatan
-- Cukup memasukan alamat EVM yang kalian gunakan di testnet
-- Masukan batasan harian untuk setiap agent. Contoh saya ingin berinteraksi dengan setiap agent 10x perhari, maka cukup masukan `10`.
+## Notes
+- Simply enter the EVM address you are using on the testnet.
+- Set a daily interaction limit for each agent. For example, if you want to interact with each agent 10 times per day, just enter `10`.
 
-## Lisensi
+## License
 
-Proyek ini dilisensikan di bawah lisensi MIT. Lihat file LICENSE untuk informasi lebih lanjut.
-
-## Kontak
-
-- Channel: [https://t.me/ugdairdrop](https://t.me/ugdairdrop)
-- Author: [https://t.me/jodohsaya](https://t.me/jodohsaya)
+This project is licensed under the MIT license. See the LICENSE file for more details.
