@@ -1,30 +1,30 @@
 import json
 import random
 
-# Daftar kata kunci berdasarkan kategori
+# List of keywords based on category
 keywords = {
-  "ai": [
-    "AI", "machine learning", "neural networks", "AI ethics", "AI governance",
-    "AI-powered trading", "automated decision-making", "AI-driven security",
-    "natural language processing", "computer vision", "reinforcement learning",
-    "AI in healthcare", "AI in finance", "AI in education", "AI in robotics"
-  ],
-  "crypto": [
-    "blockchain", "smart contracts", "NFT", "DeFi", "DAO", "consensus mechanism",
-    "public ledger", "crypto wallet", "Ethereum", "Bitcoin", "staking",
-    "cryptographic algorithms", "tokenomics", "crypto regulations", "crypto mining",
-    "crypto exchanges", "initial coin offerings", "stablecoins"
-  ],
-  "fraud_detection": [
-    "identify fraudulent transactions", "security concerns", "zero-knowledge proofs",
-    "transparency", "game theory in crypto", "privacy coins", "oracles",
-    "anomaly detection", "behavioral analytics", "fraud prevention strategies",
-    "biometric authentication", "multi-factor authentication", "risk assessment",
-    "transaction monitoring", "fraud detection algorithms"
-  ]
+    "ai": [
+        "AI", "machine learning", "neural networks", "AI ethics", "AI governance",
+        "AI-powered trading", "automated decision-making", "AI-driven security",
+        "natural language processing", "computer vision", "reinforcement learning",
+        "AI in healthcare", "AI in finance", "AI in education", "AI in robotics"
+    ],
+    "crypto": [
+        "blockchain", "smart contracts", "NFT", "DeFi", "DAO", "consensus mechanism",
+        "public ledger", "crypto wallet", "Ethereum", "Bitcoin", "staking",
+        "cryptographic algorithms", "tokenomics", "crypto regulations", "crypto mining",
+        "crypto exchanges", "initial coin offerings", "stablecoins"
+    ],
+    "fraud_detection": [
+        "identify fraudulent transactions", "security concerns", "zero-knowledge proofs",
+        "transparency", "game theory in crypto", "privacy coins", "oracles",
+        "anomaly detection", "behavioral analytics", "fraud prevention strategies",
+        "biometric authentication", "multi-factor authentication", "risk assessment",
+        "transaction monitoring", "fraud detection algorithms"
+    ]
 }
 
-# Frasa tambahan untuk variasi pertanyaan
+# Additional phrases for question variations
 extra_phrases = [
     "in the future", "impact on economy", "challenges faced", "advantages and disadvantages",
     "real-world applications", "security concerns", "scalability issues", "role in financial markets",
@@ -32,7 +32,7 @@ extra_phrases = [
     "ethical concerns", "adoption by enterprises", "potential for mass adoption"
 ]
 
-# Starter untuk variasi struktur pertanyaan
+# Starters for different question structures
 starters = [
     "What is", "How does", "Why is", "Can you explain", "What are the benefits of",
     "How can", "What makes", "What are the features of", "How does", "What is the purpose of",
@@ -40,10 +40,10 @@ starters = [
     "Discuss the role of", "Analyze the impact of", "Explain the concept of"
 ]
 
-# Konteks tambahan untuk variasi
+# Additional contexts for variation
 contexts = ["in today's world", "for businesses", "for individuals", "in technology"]
 
-# Fungsi untuk menghasilkan pertanyaan acak berdasarkan topik
+# Function to generate a random question based on a topic
 def generate_random_question(topic):
     random_starter = random.choice(starters)
     random_keyword = random.choice(keywords[topic])
@@ -51,7 +51,7 @@ def generate_random_question(topic):
     random_context = random.choice(contexts)
     return f"{random_starter} {random_keyword} {random_extra} {random_context}?"
 
-# Fungsi untuk menghasilkan sejumlah pertanyaan acak per topik
+# Function to generate a set number of random questions per topic
 def generate_questions_per_topic(count):
     questions = {
         "ai": [generate_random_question("ai") for _ in range(count)],
@@ -60,12 +60,12 @@ def generate_questions_per_topic(count):
     }
     return questions
 
-# Jumlah pertanyaan yang ingin dihasilkan per topik
+# Number of questions to generate per topic
 question_count_per_topic = 500
 
-# Hasilkan pertanyaan dan simpan ke file JSON
+# Generate questions and save to a JSON file
 if __name__ == "__main__":
     questions_by_topic = generate_questions_per_topic(question_count_per_topic)
     with open("random_questions.json", "w") as f:
         json.dump(questions_by_topic, f, indent=2)
-    print(f"{question_count_per_topic} pertanyaan acak per topik telah disimpan di random_questions.json")
+    print(f"{question_count_per_topic} random questions per topic have been saved in random_questions.json")
