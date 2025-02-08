@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
+# Automatically detect text files and perform LF (Line Feed) normalization
 * text=auto
